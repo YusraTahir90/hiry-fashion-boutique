@@ -1,0 +1,620 @@
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Merienda';
+}
+section{
+    min-height: 100vh;
+    width:100%;
+}
+#home{
+    position: relative;
+    display: grid;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+}
+.background-img{
+    position: absolute;
+    inset: 0;
+    background:url("images/home-background.jpg") center no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+header{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 2fr auto;
+    gap:50px;
+    justify-content: space-evenly;
+    margin:auto;
+    padding-left:20px;
+    z-index: 1;
+    width: 100%;
+    background-color: rgba(68, 63, 63, 0.1);
+    backdrop-filter: blur(10px);
+}
+.logo img{
+    left:20px;
+    width: 90px;
+    height: 80px;
+}
+.logo img:hover{
+    transform: scale(1.2);
+}
+.navbar ul{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-top: 20px;
+    list-style: none;
+    margin-top: 10px; 
+}
+.navbar li{
+    background-color:rgb(248, 243, 223);
+    border:2px solid rgb(122, 57, 75);
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+.navbar li:hover{
+    border:2px solid rgb(122, 57, 75);
+    background-color:rgb(233, 224, 187);
+    transform: scale(1.2);
+}
+.navbar a{
+    text-decoration: none;
+    color:rgb(122, 57, 75);
+}
+.navbar a:hover{
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+.mode button{
+    padding:20px;
+    right:20px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    margin-top: 20px;
+}
+i:hover{
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+.content{
+    position: relative;
+    margin: auto;
+    padding: 10px 80px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: rgb(102, 47, 62);
+    background-color: rgba(248, 243, 223, 0.1);
+    backdrop-filter: blur(8px);
+    box-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+.content h1 {
+    font-size: 100px;
+    margin: 0;
+}
+.content p {
+    font-size: 30px;
+    margin-top: 5px;
+}
+.content:hover{
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+.content h1:hover{
+    transform: scale(1.2);
+}
+.content p:hover{
+    transform: scale(1.2);
+}
+.cta{
+    padding:8px;
+   
+}
+.cta button{
+    padding: 4px 8px;
+    margin: 10px 30px ;
+    border: 2px solid rgb(122, 57, 75);
+    border-radius: 10px;
+    font-family: 'Merienda';
+    color:rgb(122, 57, 75);
+    background-color: rgb(248, 243, 223);
+    font-size: large;
+}
+.cta button a{
+    text-decoration: none;
+    color: rgb(122, 57, 75);
+}
+.cta button:hover{
+    border:2px solid rgb(122, 57, 75);
+    background-color:rgb(233, 224, 187);
+    transform: scale(1.2);
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+#about{
+    display: flex;
+    width: 100%;
+    background-color:rgb(248, 243, 223);
+    align-items: center;
+    position: relative;
+}
+.about-image {
+    width: 40%;
+    padding: 50px;
+}
+.about-image img {
+    width: 100%;
+    max-height: 80vh;
+    display: block;
+}
+.about-image img:hover{
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+.about-content {
+    width: 60%;
+    padding: 50px;
+    line-height: 2;
+}
+.about-content h2:hover{
+    transform: scaleY(1.2);
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+.about-content p:hover{
+    text-shadow: none;
+    transform: none;
+}
+.cta2 button{
+    position: absolute;
+    bottom: 70px;
+    right: 15%;
+    padding: 5px;
+    border: 2px solid rgb(122, 57, 75);
+    border-radius: 10px;
+    font-family: 'Merienda';
+    color:rgb(122, 57, 75);
+    background-color: rgb(248, 243, 223);
+    font-size: medium;
+    width: fit-content;
+}
+.cta2 button:hover{
+    transform: scale(1.2);
+    background-color:rgb(233, 224, 187);
+}
+.cta2 button a{
+    padding: 20px 10px;
+    text-decoration: none;
+    color:rgb(122, 57, 75);
+}
+.cta2 button a:hover{
+    transform: scaleY(1.2);
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+#service{
+    background:url("images/service-background.jpg") no-repeat center;
+    background-size: cover;
+    inset: 0;
+    z-index: 0;
+}
+.container{
+    position: relative;
+    margin: auto;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: black;
+    background-color: rgba(248, 243, 223, 0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 2px 2px 5px rgb(104, 47, 63);
+    width: 70%;
+    transform: translateY(30vh);
+}
+.container-heading h2{
+    justify-content: center;
+    text-align: center;
+}
+.container-heading h2:hover{
+    transform: scale(1.2);
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+.container-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.container-content div{
+    border: 1px solid rgb(104, 47, 63);
+    padding:20px;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    transition: all 0.6s ease;
+    background-color: rgb(248, 243, 223);
+}
+.container-content h3:hover{
+    transform: scale(1.2);
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+.container-content p{
+    font-size: smaller;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    transition: max-height 0.6s ease, opacity 0.3s ease, margin 0.6s ease;
+}
+.container-content div:hover{
+    background-color: rgb(233, 224, 187);
+}
+.container-content div:hover p {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 15px;
+    text-align: center;
+    text-shadow: none;
+}
+#whychooseus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(248, 243, 223);
+}
+.whychooseus-container{
+    width: 60%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: rgba(184, 62, 62, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 2px 5px rgb(104, 47, 63);
+    border-radius: 10px;
+}
+.whychooseus-heading h2{
+    text-align: center;
+}
+.whychooseus-heading h2:hover{
+    transform: scale(1.2);
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+.whychooseus-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    margin-top: 30px;
+}
+.whychooseus-content div{
+    border: 1px solid transparent;
+    text-align: center;
+    height: 150px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgb(248, 243, 223);
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.whychooseus-content h3:hover{
+    transform: scale(1.2);
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+.whychooseus-content p{
+    font-size: smaller;
+    max-height: 0;
+    backface-visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    transform: rotateY(180deg);
+}
+.whychooseus-content div:hover{
+    transform: rotateY(180deg);
+    box-shadow: 2px 2px 5px rgb(104, 47, 63);
+    background-color: rgb(233, 224, 187);
+}
+.whychooseus-content div:hover h3{
+    visibility: hidden;
+    opacity: 0;
+}
+.whychooseus-content div:hover p{
+    visibility: visible;
+    opacity: 1;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#testimonials{
+    background:url("images/review-background.jpg") center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.review-container{
+    border: 1px solid black;
+    width: 70%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: rgba(184, 62, 62, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 2px 5px rgb(104, 47, 63);
+    border-radius: 10px;
+}
+.review-heading h2{
+    text-align: center;
+}
+.review-heading h2:hover{
+    transform: scale(1.2);
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+.review-content{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 30px;
+    margin-top: 10px;
+}
+.review-content div{
+    border: 1px solid transparent;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(248, 243, 223);
+    margin-top: 10px;
+}
+.review-content h4{
+    margin-left: 30px;
+}
+.review-content p{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+span{
+    float: right;
+    margin-right: 100px;
+}
+span i{
+    color: rgb(224, 224, 29);
+    gap:10px;
+}
+.review-content h4:hover{
+    transform: scaleY(1.2);
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+.review-content p:hover{
+    transform: none;
+    text-shadow: none;
+}
+#contact{
+    background-color: rgb(248, 243, 223);
+}
+.contact-content{
+    position: relative;
+    margin: auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.map iframe{
+    border: 1px solid black;
+    border-radius: 7px;
+    margin-top: 30px;
+    box-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+.map h4{
+    margin-top: 20px;
+}
+.map p{
+    margin: 5px;
+    margin-left: 20px;
+}
+.map p:hover{
+    transform: none;
+}
+.map h4:hover{
+    transform: scaleY(1.2);
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+#para:hover{
+    transform: scaleY(1.2);
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+.form{
+    background-color: rgba(184, 62, 62, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 20px 20px 20px 50px;
+    width: 50%;
+    height: fit-content;
+    margin-left: 50px;
+    box-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+.contact-heading{
+    text-align: center;
+}
+.contact-heading h3:hover{
+    transform: scale(1.2);
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+form{
+    font-size: medium;
+    padding: 15px;
+}
+form input{
+    border: 1px solid rgb(102, 47, 62);
+    border-radius: 10px;
+    padding: 8px;
+    width: 300px;
+    margin-top: 5px;
+    background-color: rgb(248, 243, 223);
+}
+form input:hover{
+    background-color: rgb(233, 224, 187);
+    transform: scale(1.1);
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+    border: 1px solid rgb(104, 47, 63);
+}
+form textarea{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 8px;
+    margin-top: 5px;
+    background-color: rgb(248, 243, 223);
+}
+form textarea:hover{
+    background-color: rgb(233, 224, 187);
+    transform: scale(1.1);
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+    border: 1px solid rgb(104, 47, 63);
+}
+form input[type="submit"]{
+    display: block;
+    margin: 10px auto 0;
+}
+form label:hover{
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+}
+#footer{
+    min-height: auto;
+    width: 100%;
+    background-color: rgba(138, 24, 24, 0.1);
+    backdrop-filter: blur(16px);
+    text-align: center;
+    padding: 10px;
+}
+.footer-content div{
+    margin: 20px;
+}
+footer div ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+}
+.footer-content h3:hover, p:hover, li:hover{
+    text-shadow: 2px 2px 5px rgb(104, 47, 63);
+    transform: scale(1.1);
+}
+
+body.dark-mode{
+    background-color: rgb(35, 27, 30);
+    color: rgb(245, 235, 225);
+}
+body.dark-mode header{
+    background-color: rgba(35, 27, 30, 0.75);
+}
+body.dark-mode .navbar li{
+    background-color: rgb(65, 45, 52);
+    border-color: rgb(190, 130, 145);
+}
+body.dark-mode .navbar li:hover{
+    background-color: rgb(85, 55, 65);
+}
+body.dark-mode .navbar a{
+    color: rgb(245, 225, 230);
+}
+body.dark-mode .content{
+    background-color: rgba(35, 27, 30, 0.55);
+    color: rgb(245, 225, 230);
+    box-shadow: 2px 2px 8px rgb(30, 20, 23);
+}
+body.dark-mode .cta button,
+body.dark-mode .cta2 button{
+    background-color: rgb(65, 45, 52);
+    border-color: rgb(190, 130, 145);
+}
+body.dark-mode .cta button a,
+body.dark-mode .cta2 button a{
+    color: rgb(245, 225, 230);
+}
+body.dark-mode .cta button:hover,
+body.dark-mode .cta2 button:hover{
+    background-color: rgb(85, 55, 65);
+}
+body.dark-mode #about{
+    background-color: rgb(35, 27, 30);
+    color: rgb(245, 235, 225);
+}
+body.dark-mode .container{
+    background-color: rgba(35, 27, 30, 0.65);
+    color: rgb(245, 225, 230);
+}
+body.dark-mode .container-content div{
+    background-color: rgb(65, 45, 52);
+    border-color: rgb(190, 130, 145);
+    color: rgb(245, 235, 225);
+}
+body.dark-mode .container-content div:hover{
+    background-color: rgb(85, 55, 65);
+}
+body.dark-mode #whychooseus{
+    background-color: rgb(35, 27, 30);
+}
+body.dark-mode .whychooseus-container{
+    background-color: rgba(75, 50, 58, 0.45);
+}
+body.dark-mode .whychooseus-content div{
+    background-color: rgb(65, 45, 52);
+    color: rgb(245, 235, 225);
+}
+body.dark-mode .whychooseus-content div:hover{
+    background-color: rgb(85, 55, 65);
+}
+body.dark-mode .review-container{
+    background-color: rgba(35, 27, 30, 0.65);
+}
+body.dark-mode .review-content div{
+    background-color: rgb(65, 45, 52);
+    color: rgb(245, 235, 225);
+}
+body.dark-mode #contact{
+    background-color: rgb(35, 27, 30);
+    color: rgb(245, 235, 225);
+}
+body.dark-mode .form{
+    background-color: rgb(55, 38, 44);
+}
+body.dark-mode form input,
+body.dark-mode form textarea{
+    background-color: rgb(65, 45, 52);
+    color: rgb(245, 235, 225);
+    border-color: rgb(190, 130, 145);
+}
+body.dark-mode form input::placeholder,
+body.dark-mode form textarea::placeholder{
+    color: rgb(205, 190, 195);
+}
+body.dark-mode form input:hover,
+body.dark-mode form textarea:hover{
+    background-color: rgb(85, 55, 65);
+}
+body.dark-mode #footer{
+    background-color: rgb(45, 32, 37);
+    color: rgb(245, 235, 225);
+}
